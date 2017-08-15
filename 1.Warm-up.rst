@@ -1,0 +1,27 @@
+Warm up Tasks   
+=============
+
+Build the mainline
+------------------
+
+1. Clone Linus' tree
+   $ git clone --depth=1 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+
+2. Get current running kernel configuration.
+   $ zcat /proc/config.gz > $KERNEL_TREE/.config
+      
+3. Build
+   - build kernel
+   - build modules
+   - install kernel
+   - install modules
+   
+  
+Pro Tip: Do not get bogged down configuring the kernel at this stage,
+for *guaranteed* build use a running config as the basis. For quicker
+build use `make localmodconfig`. WARNING: drivers that depend on
+unselected config options may not show up in your config tool i.e
+`make xconfig` does not show ks7010 driver if CFG80211 is not
+selected, you may be able to search for the driver by name.
+     
+4. Configure bootloader and boot new kernel.

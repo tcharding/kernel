@@ -22,4 +22,9 @@ Before submitting patches we need to:
 7. Repeat step 6 on a different architecture (or cross-compile).
 
 
-     
+* Is this a fix for another patch? If so add a tag.
+
+Fixes: 7676b72428e8 ("staging: ks7010: move comparison to right hand side")
+
+You can generate the string by doing:
+        git show -s --abbrev-commit --abbrev=12 --pretty=format:"%h (\"%s\")%n" 7676b72

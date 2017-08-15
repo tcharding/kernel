@@ -1,0 +1,30 @@
+Overview
+========
+
+Aim
+---
+
+The aim of this series of documents is to outline *one* way of getting
+started with Linux kernel programming. It is by no means the only way
+and it is quite possibly not even the *best* way.
+
+Good luck.
+
+Assumptions
+-----------
+
+1. You are inherently interested in how the Linux kernel works.
+2. You know the C programming language *well*.
+3. You know how to use git.
+
+
+File listing
+------------
+
+* 0.Overview.rst - This file.
+
+* 1.Warm-up.rst - Warm up tasks to get started playing with the kernel.
+
+* 2.First-patch.rst - Steps to get your first patch merged into the kernel.
+
+* 3.First-patch-series.rst - Steps to submit your first multi-patch series.

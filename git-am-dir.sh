@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# apply-and-build.sh - apply patches and build kernel
+# git-am-dir.sh - apply patches
 
 # Author: Tobin Harding <me@tobin.cc>
 # Copyright (c) 2017 Tobin Harding
@@ -41,7 +41,7 @@ main() {
     assert_cmds
     set_globals
     handle_command_line_args "$@"
-    apply_and_build
+    apply
 }
 
 set_globals() {
@@ -64,38 +64,24 @@ handle_command_line_args () {
     patch_dir=$1
 }
 
-apply_and_build () {
+apply () {
     # check we are in a git repo
     ensure ls '.git' > /dev/null
 
-    # check we are on staging-next branch
-    ensure git branch | grep staging-next > /dev/null
-
-    # update tree
-    ensure git pull
-
-    # save current HEAD
-    _head=$(git log -1 --pretty=oneline --abbrev-commit | awk '{print $1}')
-    
-    # apply and build each patch
+    # apply each patches
     for file in $(ls $patch_dir)
     do
         # check file is not a cover letter
         [ ${file:0:4} == "0000" ] && continue
 
-        # check for directories (holding previous versions)
+        # check for directories
         [ -d $file ] && continue
         
         _patch="$patch_dir/$file"
         ensure git apply --check $_patch
 
         ensure git am -3 < $_patch
-
-        ensure make -j$nthreads EXTRA-CFLAGS=-W >/dev/null
     done
-
-    # clean up 
-    git reset --hard $_head
 
     echo ""
     echo "All patches applied and built successfully!"
