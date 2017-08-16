@@ -101,8 +101,7 @@ By now you should have three commits in your git index. Each fixing a specific c
 
 - Verify that each commit applies and builds cleanly on top of `staging-next`. All kernel patches
   must build cleanly and leave the kernel in a sane state. You may like to use a script to do this
-
-  	https://github.com/tcharding/kernel/blob/master/apply-and-build.sh
+  `apply-and-build.sh`.
 
 
 On One Change Per Commit
