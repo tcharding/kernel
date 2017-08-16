@@ -1,0 +1,153 @@
+First Patch Set
+===============
+
+This includes crafting a multi patch series. For the first series ('series' and 'set' used
+interchangeably) the code changes will be as simple as possible. The aim is to familiarize ones self
+with the Linux kernel development process.
+
+It is assumed you have had your first patch merged into the kernel.
+
+- We will be working on Greg Kroah-Hartman's staging tree, more specifically, the 'staging-next'
+  branch. If you have not got this set up, you may like to refer to `2.First-patch.rst` in this
+  directory.
+
+1. Finding something to work on
+-------------------------------
+
+Finding something to work on is often one the hurdles to cross when beginning contributing to any
+open source project. The Linux kernel is no different, and realistically is no more difficult than
+any other large open source project. There is no real answer to this question because developers are
+all different, we are all motivated by different things. We hack open source because it amuses us so
+to find something to work on we must find something that suits us personally.
+
+Some tips;
+
+- Hacking is more fun when we have small continuous successes. Pick a driver that requires work that
+  you feel you can manage. Run checkpatch on any/all the drivers in staging and pick one that
+  looks doable.
+
+- Learning is a good motivator. Pick a driver that belongs to a subsystem you are interested in.
+  The Kconfig file for each driver usually contains enough information to see if the driver sparks
+  your interest. Otherwise a quick web search will often reveal more information. For example
+
+  	dgnc/ - Multi-port Serial PCI card.
+        vme/devices - Various VME devices.
+        comedi/ - A collection of drivers for a variety of common data acquisition plug-in boards.
+        fbtft/ - The fbtft kernel module is a layer between the driver and the framebuffer subsystem.
+	rtl8*/ - Various RealTek wireless LAN cards.
+
+Either you have found a drive that throws a tonne of checkpatch warnings (some of which you are feel
+you can tackle) or you have picked a driver that inspires you, maybe the code looks nice (or maybe
+the code looks horrible so you are inspired to clean it), maybe the driver is part of a subsystem
+you would like to learn more about. You now have something to work on.
+
+2. Implement some changes
+-------------------------
+
+- If you have not already done so, run checkpatch on 'your' driver.
+
+  	checkpatch --terse --strict --show-types drivers/staging/FOO/*.{ch}
+
+- Pick three warning types that you can manage. 'warning' refers to any CHECK/WARNING/ERROR.
+
+- Fix all instances of a single warning type as a single commit (patch).
+
+  At this stage it is probably asking too much of yourself to understand the whole driver. One of
+  the obstacles to kernel hacking is getting overwhelmed by the complexity. You may like to
+  concentrate on understanding the code block surrounding the source of the warning. Next you can
+  consider understanding the whole function. Still, at this stage there will be a lot of function
+  calls and macros that you are unfamiliar with. Grepping the kernel can be difficult because the
+  code base is so large, you may also like to use
+
+	http://elixir.free-electrons.com/linux/latest/source
+
+  for online kernel identifier searches.
+
+  Don't get bogged down. Remember we are trying to learn the process not the whole kernel. You do
+  not need to understand everything to make useful minor contributions and to learn the development
+  process.
+
+- Make sure you commit log is written correctly and thoroughly. By now you should have read  
+
+	Documentation/process/submitting-patches.rst
+
+  You may like to reread Section `2) Describe your changes`. Writing commit logs is hard at
+  first. They are an integral part of the kernel development process, they require concerted effort
+  and thorough consideration.
+
+3. Check your code
+------------------
+
+As you know, all kernel development is done in the open. Submitting kernel patches with obvious
+errors is both embarrassing and a waste of resources (developer/maintainer time and effort).
+
+By now you should have three commits in your git index. Each fixing a specific checkpatch warning.
+
+- Check you patches. Maintainers typically review patches from within their email clients by reading
+  the patch (unified diff format). All patches are submitted to kernel mailing lists inline. You can
+  review your patches using the following `git` command
+
+  	git log --color=always --patch --reverse HEAD~~~.. | less 
+
+- If you need to make changes to previous commit, including the commit log, you can use
+
+  	git rebase -i HEAD~~~
+
+  If you have never rebased commits before then it can take some getting used to. git does a good
+  job holding your hand during rebase (if you read the output).
+
+  WARNING: After rebaseing be sure to check your diffs (as above) closely. It is easy to mix
+  changes up into consecutive commits when rebaseing.
+
+- Verify that each commit applies and builds cleanly on top of `staging-next`. All kernel patches
+  must build cleanly and leave the kernel in a sane state. You may like to use a script to do this
+
+  	https://github.com/tcharding/kernel/blob/master/apply-and-build.sh
+
+
+On One Change Per Commit
+------------------------
+
+Patches to the Linux kernel must fix one thing and one thing only. However, a diff that includes
+obvious errors will not get merged. If you are working on a line of code and the following line has
+a blatant error often you should fix it also. For example, say you are fixing checkpatch warning xxx
+and in doing so you touch a line that calls function foo(). The call to function foo also has the
+parenthesis in the wrong place. You should consider breaking this into a separate patch 'refactor
+call to foo' and fix the call site completely (including the fix of warning xxx).
+
+This way all the diffs will be clean. Always consider the maintainer. The Linux kernel is not short
+on developers, it is short on maintainers, anything you as a developer can do to minimize the effort
+of the maintainer should be done even if it requires 'unnecessary' extra effort on the part of the
+developer. The whole process is optimized for the maintainer.
+
+4. Output and send patch set
+----------------------------
+
+At this stage you have in your git index three commits, each does one thing and one thing only, each
+applies on top of staging-next, and each builds cleanly.
+
+- Output a linked patch set ready for sending using git
+
+	git format-patch -3 -o path/to/patch/dir --cover-letter
+
+- Write the cover letter. For a simple series like this a brief sentence describing the series will
+  suffice.
+
+- You may, at this stage, like to email the patch set to your self. This is a useful step when
+  getting started so you can verify that everything looks good. 
+
+- Ascertain the correct recipient of the patch series. You can do this by looking in the TODO file
+  for the driver. Also you can run the `get_maintainers` script. The output of this script can be
+  verbose. The Linux kernel community errs on the side of sending patches to too many people, a
+  simple series like this however need only be sent to the device driver mailing list, Greg
+  Kroah-Hartman, and any other maintainers listed by the script (unless directed otherwise by the
+  TODO file).
+
+	scripts/get_maintainer.pl path/to/patch/dir/*.patch
+
+- You can send the series using git. If you add the `To:` and `Cc:` headers to the cover letter then
+  the following command does what you need
+
+  	git send-email --to-cover --cc-cover path/to/patch/dir/*.patch
+
+        

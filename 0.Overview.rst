@@ -27,6 +27,6 @@ File listing
 
 * 2.First-patch.rst - Steps to get your first patch merged into the kernel.
 
-* **Still to do** 3.First-patch-series.rst - Steps to submit your first multi-patch series.
+* **Still to do** 3.First-patch-set.rst - Steps to submit your first multi-patch series.
 
   for blog posts of a similar nature see `tobin.cc <http://tobin.cc/blog>`_
