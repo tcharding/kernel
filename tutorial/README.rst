@@ -17,12 +17,10 @@ doing so. Here is a quick list of what you need;
 - Have a kernel development environment set up (editor, mail client, git). 
 - Have subscribed to the Linux kernel device driver mailing list.
 
-These steps are briefly outline in `../2.First-patch.rst` and more thoroughly in this blog_ post.
+These steps are briefly outline in `../2.First-patch.rst` and more thoroughly in this blog_ post and
+on kernelnewbies_.
 
 .. _blog: http://tobin.cc/blog/kernel-dev-1
-
-Also on kernelnewbies_
-
 .. _kernelnewbies: https://kernelnewbies.org/FirstKernelPatch
 
 Track One
