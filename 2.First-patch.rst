@@ -108,9 +108,7 @@ Commit your changes as a single commit. Write a *correct* git log for the commit
         
 If asked to do so, fix your patch and re-submit.
 
-   Pro Tip: Wait at least two weeks before following up on any email
-   sent to a kernel mailing list.
-
+Pro Tip: Wait at least two weeks before following up on any email sent to a kernel mailing list.
 
 At this stage, if all went successfully, you should get an email from
 Greg Kroah-Hartman saying that your patch was merged into
