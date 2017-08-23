@@ -1,6 +1,6 @@
 
-Kerel Quotes I Found Amusing
-============================
+Amusing Kernel Quotes
+=====================
 
 - Fire up your editor and come join us; you will be more than welcome.
 
