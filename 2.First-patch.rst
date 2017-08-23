@@ -27,16 +27,16 @@ Pro Tip: Limit scope to the following directories;
 
 You may wish to add to your git config
 
-```
+
         [format]
         	signOff = true
-```
+
 You will also need
-```
+
 	[user]
 		email = joe@email.com
 		name = Joe Developer
-                ```
+
                 
 Pro Tip: If you already have git configured with your GitHub username
 then add the real name configuration lines to the git config file
