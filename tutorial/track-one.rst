@@ -15,37 +15,37 @@ Two if you would like to jump straight into doing a series that can be submitted
    
 - Check out the 4.9 kernel
 
-.. code:: bash   
+  .. code:: bash   
 
-   	  git checkout -b tutorial 69973b8
+   	    git checkout -b tutorial 69973b8
 
 - Verify the following config options are enabled (grep $KERNEL/.config)
 
-.. code:: bash
+  .. code:: bash
 
-   	  CONFIG_STAGING=y
-   	  CONFIG_KS7010=m
+   	    CONFIG_STAGING=y
+   	    CONFIG_KS7010=m
 
 - Build the module (see shell-utils.sh)
 
-.. code:: bash
+  .. code:: bash
 
-  	  $ make -j9 M=drivers/staging/ks7010
+  	    $ make -j9 M=drivers/staging/ks7010
         
 2. Checkpatch
 -------------
 
 - You may like to define a shell alias
 
-.. code:: bash
+  .. code:: bash
 
-	  alias checkpatch="$KERNEL/scripts/checkpatch.pl -f"
+	    alias checkpatch="$KERNEL/scripts/checkpatch.pl -f"
 
 - Run `checkpatch` on the C source files in the ks7010 driver
         
-.. code:: bash
+  .. code:: bash
 
-  	  checkpatch --terse --strict --show-types drivers/staging/ks7010/*.c
+  	    checkpatch --terse --strict --show-types drivers/staging/ks7010/*.c
 
 - Pick 3 types of warnings to fix
 
@@ -76,12 +76,12 @@ Two if you would like to jump straight into doing a series that can be submitted
           
 	     Remove unnecessary parentheses.
 
-- Build the module.
+- Build the module
 
   All patches to the kernel must build cleanly. This means every patch within a
   series must build cleanly, not just the last one.
   
-- Repeat for the other two warning types you picked.
+- Repeat for the other two warning types you picked
 
 3. Patch Set
 ------------
@@ -91,25 +91,27 @@ type. Each commit is described fully in the commit log and each commit builds cl
 
 - Read through the diff of all three commits checking for any mistakes.
 
-.. code:: bash
+  .. code:: bash
 
-          git log --color=always --patch --reverse HEAD~~~.. | less
+            git log --color=always --patch --reverse HEAD~~~.. | less
 
 - Now use git to output a patch series
 
-.. code:: bash  
+  .. code:: bash  
 
-	  git format-patch -3 -o path/to/patch/dir --cover-letter
+	    git format-patch -3 -o path/to/patch/dir --cover-letter
 
-- Write the cover letter. For a simple series like this a brief sentence describing the series will
-  suffice.
+- Write the cover letter. 
 
-- Email the patch set to your self. This is a useful step when getting started so you can verify
-  that everything looks good.
+  For a simple series like this a brief sentence describing the series will suffice.
 
+- Email the patch set to your self.
+
+  This is a useful step when getting started so you can verify that everything looks good.
+  
   .. code:: bash
 
-  	    git send-email --to='me@mail.com' path/to/patch/dir/*.patch
+            git send-email --to='me@mail.com' path/to/patch/dir/*.patch
 
 Profit
 ------
