@@ -76,7 +76,7 @@ submit them to the driver dev mailing list.
 
 Run `checkpatch.pl` against drivers in staging until you find a warning that you feel you can fix.
 
- .. code:: bash
+.. code:: bash
 
 	scripts/checkpatch.pl -f drivers/staging/FOO/*.c
 
