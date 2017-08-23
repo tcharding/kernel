@@ -59,7 +59,7 @@ Track One.
 
   .. code:: bash
 
-  	    git format-patch -3 -o path/to/patches --cover-letter
+  	    git format-patch -3 -o path/to/patch/dir --cover-letter
 
 - Ascertain the recipients of your patch set (check the TODO within the driver if present)
 
@@ -75,7 +75,7 @@ Track One.
 
   .. code:: bash
 
-	    git send-email --to='me@gmail.com' path/to/patches/*.patch
+	    git send-email --to='me@gmail.com' path/to/patch/dir/*.patch
 
 - Submit the series for real. If you add the `To:` and `Cc:` headers to the cover letter then
   the following command does what you need
