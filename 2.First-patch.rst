@@ -17,12 +17,10 @@ Pro Tip: Limit scope to the following directories;
 
 **1. Set up your tools.**
 
-- Editor: The kernel uses a specific coding style, you may like to
-configure your editor to support this.
+- Editor: The kernel uses a specific coding style, you may like to configure your editor to support this.
 
-- Email: All kernel development is done in the open, this means via
-mailing lists. All patches are sent inline, this means no
-attachments.
+- Email: All kernel development is done in the open, this means via mailing lists. All patches are
+  sent inline, this means no attachments.
 
 Pro Tip: Never respond privately to an email from a kernel
 developer that contains a mailing list in the CC's
