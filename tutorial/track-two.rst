@@ -81,6 +81,7 @@ Track One.
   the following command does what you need
 
   .. code:: bash
+
   	    git send-email --to-cover --cc-cover path/to/patch/dir/*.patch
 
             
