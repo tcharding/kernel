@@ -89,7 +89,7 @@ job is worth doing it is worth doing properly.
 
 Commit your changes as a single commit. Write a *correct* git log for the commit. Read
 
-	Documentation/process/submitting-patches.rst
+`Documentation/process/submitting-patches.rst`
 
    Commit log messages must be of a specific format and content. At
    first they are difficult and time consuming to write. You may even
@@ -103,9 +103,9 @@ Commit your changes as a single commit. Write a *correct* git log for the commit
 - git format-patch
 - git send-email
 
-   Check the TODO file for whom to send the patch to, or use
+Check the TODO file for whom to send the patch to, or use
 
-   	`scripts/get_maintainer.pl`
+`scripts/get_maintainer.pl`
 
 **8. Respond to feedback.**
         
