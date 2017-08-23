@@ -29,4 +29,5 @@ File listing
 
 * 3.First-patch-set.rst - Steps to submit your first multi-patch series.
 
-  for blog posts of a similar nature see `http://tobin.cc/blog <http://tobin.cc/blog>`_
+
+For blog posts of a similar nature see `http://tobin.cc/blog <http://tobin.cc/blog>`_
