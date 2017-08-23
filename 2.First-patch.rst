@@ -121,6 +121,8 @@ If asked to do so, fix your patch and re-submit.
 
 Pro Tip: Wait at least two weeks before following up on any email sent to a kernel mailing list.
 
+**Final**
+
 At this stage, if all went successfully, you should get an email from
 Greg Kroah-Hartman saying that your patch was merged into
 staging-testing. From here your patch will automatically transition to
