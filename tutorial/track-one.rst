@@ -117,7 +117,7 @@ type. Each commit is described fully in the commit log and each commit builds cl
 Profit
 ------
             
-Now (in Real Life) you would email this patch set to the device driver mailing list. Well done. Now
+Now, in real life, you would email this patch set to the device driver mailing list. Well done. Now
 (or later) you can repeat this process on top of the current staging-next branch and submit your
 first patch set to the Linux kernel.
   
