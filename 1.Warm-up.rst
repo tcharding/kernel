@@ -1,8 +1,5 @@
-Warm up Tasks   
-=============
-
-Build the mainline
-------------------
+Warm up Task - Build the Mainline
+==================================
 
 1. Clone Linus' tree
 --------------------
