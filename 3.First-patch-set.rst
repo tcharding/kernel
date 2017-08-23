@@ -61,7 +61,7 @@ you would like to learn more about. You now have something to work on.
   calls and macros that you are unfamiliar with. Grepping the kernel can be difficult because the
   code base is so large, you may also like to use
 
-	http://elixir.free-electrons.com/linux/latest/source
+  http://elixir.free-electrons.com/linux/latest/source
 
   for online kernel identifier searches.
 
@@ -71,9 +71,9 @@ you would like to learn more about. You now have something to work on.
 
 - Make sure you commit log is written correctly and thoroughly. By now you should have read  
 
-	Documentation/process/submitting-patches.rst
+  Documentation/process/submitting-patches.rst
 
-  You may like to reread Section `2) Describe your changes`. Writing commit logs is hard at
+  You may like to reread Section *2 Describe your changes*. Writing commit logs is hard at
   first. They are an integral part of the kernel development process, they require concerted effort
   and thorough consideration.
 
