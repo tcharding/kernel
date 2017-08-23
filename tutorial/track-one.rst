@@ -49,7 +49,7 @@ Two if you would like to jump straight into doing a series that can be submitted
 
 - Pick 3 types of warnings to fix
 
-  All checkpatch output CHECK/WARNING/ERROR referred to as warnings).
+  All checkpatch output CHECK/WARNING/ERROR referred to as warnings.
 
 - Fix a single warning type
     
@@ -66,15 +66,16 @@ Two if you would like to jump straight into doing a series that can be submitted
 
             Documentation/process/submitting-patches.rst (Section 2 - Describe your changes)
 
-   Here is an example git log for a simple checkpatch fix.
+            
+  Here is an example git log for a simple checkpatch fix.
 
-   .. code:: bash        
+  .. code:: bash        
 
-	     staging: ks7010: remove unnecessary parenthesis
+	    staging: ks7010: remove unnecessary parenthesis
           
-	     Checkpatch emits CHECK: Unnecessary parentheses.
+	    Checkpatch emits CHECK: Unnecessary parentheses.
           
-	     Remove unnecessary parentheses.
+	    Remove unnecessary parentheses.
 
 - Build the module
 
