@@ -15,13 +15,13 @@ Amusing Kernel Quotes
 
   If you don't see why, please stay the fuck away from my code.
 
-(Linus)
+  (Linus)
 
 - This conversation is unreal. Just remove the misguided assert and
   you're good. After that, please have someone explain basic reference
   counting to you.
 
-(Andreas)	
+  (Andreas)	
 
 
 
