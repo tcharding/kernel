@@ -21,25 +21,22 @@ Pro Tip: Limit scope to the following directories;
 
 - Email: All kernel development is done in the open, this means via mailing lists. All patches are
   sent inline, this means no attachments.
-
-Pro Tip: Never respond privately to an email from a kernel
-developer that contains a mailing list in the CC's
-
 - Git: Configure git with your email address and name. All kernel changes must contain a tag
 
-	Signed-off-by: Joe Developer <joe@email.com>
+	`Signed-off-by: Joe Developer <joe@email.com>`
 
 You may wish to add to your git config
 
+```
         [format]
         	signOff = true
-
+```
 You will also need
-
+```
 	[user]
 		email = joe@email.com
 		name = Joe Developer
-
+```
 Pro Tip: If you already have git configured with your GitHub username
 then add the real name configuration lines to the git config file
 within your kernel development tree (see task 3 below).
