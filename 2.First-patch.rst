@@ -1,11 +1,10 @@
 First Patch
 ===========
 
-This includes steps to getting your first patch merged into the
-mainline kernel.
+This includes steps to getting your first patch merged into the mainline kernel.
 
-NOTE: Do not submit patches to any part of the kernel outside of
-drivers/staging whilst getting started with kernel development.
+NOTE: Do not submit patches to any part of the kernel outside of drivers/staging whilst getting
+started with kernel development.
 
 Pro Tip: Limit scope to the following directories;
 
@@ -37,7 +36,7 @@ You may wish to add to your git config
 		signOff = true
 
         
-You will also need
+You may also need
 
 .. code:: bash
 
@@ -84,7 +83,8 @@ Set up development tree.
 Pro Tip: Work off of staging-next but make sure your patches apply to staging-testing before you
 submit them to the driver dev mailing list.
    
-**4. Run checkpatch.**
+4. Checkpatch
+-------------
 
 Run `checkpatch.pl` against drivers in staging until you find a warning that you feel you can fix.
 
@@ -101,7 +101,7 @@ Fix **all** instances of the warning within the driver you have chosen. While no
 job is worth doing it is worth doing properly.
    
 6. Commit
-   ---------
+---------
    
 Commit your changes as a single commit. Write a *correct* git log for the commit. Read
 
@@ -133,8 +133,8 @@ Check the TODO file for whom to send the patch to, or use
 
           scripts/get_maintainer.pl
 
-8. Response          
------------
+8. Respond
+----------
              
 Respond to feedback you receive from maintainers and/or reviewers.
         
