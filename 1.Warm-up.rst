@@ -1,21 +1,29 @@
 Warm up Task - Build the Mainline
 ==================================
 
-1. Clone Linus' tree
---------------------
+1. Clone
+--------   
+
+Clone  Linus' tree
+
 
 .. code:: bash   
 
           git clone --depth=1 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 
-**2. Get current running kernel configuration.**
+2. Config
+---------
+
+Get current running kernel configuration.
 
 .. code:: bash   
 
           zcat /proc/config.gz > $KERNEL_TREE/.config
       
-3. Build and install
---------------------
+3. Build
+--------
+
+Build and install the kernel as applicable for your distribution.
 
 - build kernel
 - build modules
