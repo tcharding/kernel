@@ -46,7 +46,9 @@ you would like to learn more about. You now have something to work on.
 
 - If you have not already done so, run checkpatch on 'your' driver.
 
-  	checkpatch --terse --strict --show-types drivers/staging/FOO/*.{ch}
+.. code:: bash
+  
+          checkpatch --terse --strict --show-types drivers/staging/FOO/*.{ch}
 
 - Pick three warning types that you can manage. 'warning' refers to any CHECK/WARNING/ERROR.
 
