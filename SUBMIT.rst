@@ -24,7 +24,12 @@ Before submitting patches we need to:
 
 * Is this a fix for another patch? If so add a tag.
 
-Fixes: 7676b72428e8 ("staging: ks7010: move comparison to right hand side")
+  .. code:: bash
 
-You can generate the string by doing:
-        git show -s --abbrev-commit --abbrev=12 --pretty=format:"%h (\"%s\")%n" 7676b72
+            Fixes: 7676b72428e8 ("staging: ks7010: move comparison to right hand side")
+
+You can generate the string by doing
+
+.. code:: bash
+
+          git show -s --abbrev-commit --abbrev=12 --pretty=format:"%h (\"%s\")%n" 7676b72
