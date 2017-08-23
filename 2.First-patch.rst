@@ -15,7 +15,7 @@ Pro Tip: Limit scope to the following directories;
 - include/uapi/
 
 
-1. Set up your tools.
+**1. Set up your tools.**
 
 - Editor: The kernel uses a specific coding style, you may like to
 configure your editor to support this.
@@ -79,12 +79,12 @@ on a kernel mailing list.
 
    Pro Tip: Do not fix line over 80 warnings.
 
-5. Fix *all* instances of the warning within the driver you have
-   chosen. While not essential, if a job is worth doing it is worth
-   doing properly.
+**5. Fix *all* instances of the warning within the driver you have chosen. While not essential, if a
+job is worth doing it is worth doing properly.**
+   
+**6. Commit your changes as a single commit**
 
-6. Commit your changes as a single commit, write a *correct* git log
-   for the commit. Read
+Write a *correct* git log for the commit. Read
 
 	Documentation/process/submitting-patches.rst
 
@@ -95,7 +95,8 @@ on a kernel mailing list.
    to be taken seriously you need to apply effort to learning the
    development process and display that you have done so.
  
-7. Create and send patch using git
+**7. Create and send patch using git**
+
    - git format-patch
    - git send-email
 
@@ -103,8 +104,9 @@ on a kernel mailing list.
 
    	`scripts/get_maintainer.pl`
 
-8. Respond to feedback. If asked to do so, fix your patch and
-   re-submit.
+**8. Respond to feedback.**
+        
+If asked to do so, fix your patch and re-submit.
 
    Pro Tip: Wait at least two weeks before following up on any email
    sent to a kernel mailing list.
