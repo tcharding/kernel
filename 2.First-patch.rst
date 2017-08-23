@@ -56,7 +56,7 @@ Pro Tip: Do not bother subscribing to LKML at this stage.
 At this stage you may like to sort emails from mailing lists into
 separate mail boxes. Example regex for sorting;
 
-	^List-ID:.*<driverdev-devel.linuxdriverproject.org>$
+`^List-ID:.*<driverdev-devel.linuxdriverproject.org>$`
 
 Pro Tip: Always maintain the complete CC list when responding to mails
 on a kernel mailing list.
@@ -69,10 +69,9 @@ on a kernel mailing list.
 
 - Set up tracking branch on staging-next (or staging-testing)
 
-   Pro Tip: Work off of staging-next but make sure your patches apply
-   to staging-testing before you submit them to the driver dev mailing
-   list.
-
+Pro Tip: Work off of staging-next but make sure your patches apply to staging-testing before you
+submit them to the driver dev mailing list.
+   
 **4. Run checkpatch.**
 
 Run `checkpatch.pl` against drivers in staging until you find a warning that you feel you can fix.**
