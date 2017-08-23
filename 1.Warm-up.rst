@@ -14,10 +14,10 @@ Build the mainline
       
 3. Build  
 
- - build kernel
- - build modules
- - install kernel
- - install modules
+- build kernel
+- build modules
+- install kernel
+- install modules
    
   
 Pro Tip: Do not get bogged down configuring the kernel at this stage, for *guaranteed* build use a
