@@ -51,4 +51,4 @@ whether you finish in 2 hours or not.
 - May or may not complete within the two hours.
 
 
-*If you choose Track One you can always complete Track Two later if it amuses you.*
+**If you choose Track One you can always complete Track Two later if it amuses you.**
