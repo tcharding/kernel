@@ -74,7 +74,7 @@ submit them to the driver dev mailing list.
    
 **4. Run checkpatch.**
 
-Run `checkpatch.pl` against drivers in staging until you find a warning that you feel you can fix.**
+Run `checkpatch.pl` against drivers in staging until you find a warning that you feel you can fix.
    
 `scripts/checkpatch.pl -f drivers/staging/FOO/*.c`
 
@@ -82,7 +82,7 @@ Pro Tip: Do not fix line over 80 warnings.
 
 **5. Fix chosen warning.**
 
-Fix *all* instances of the warning within the driver you have chosen. While not essential, if a
+Fix **all** instances of the warning within the driver you have chosen. While not essential, if a
 job is worth doing it is worth doing properly.
    
 **6. Commit your changes.**
