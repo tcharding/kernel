@@ -21,7 +21,9 @@ These steps are briefly outline in `../2.First-patch.rst` and more thoroughly in
 
 .. _blog: http://tobin.cc/blog/kernel-dev-1
 
-Also on `kernelnewbies <https://kernelnewbies.org/FirstKernelPatch>`
+Also on kernelnewbies_
+
+.. _kernelnewbies: https://kernelnewbies.org/FirstKernelPatch
 
 Track One
 ---------
