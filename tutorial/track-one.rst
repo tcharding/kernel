@@ -19,14 +19,14 @@ Two if you would like to jump straight into doing a series that can be submitted
 
    	  git checkout -b tutorial 69973b8
 
-- Verify the following (`grep FOO $KERNEL/.config`)
+- Verify the following config options are enabled (grep $KERNEL/.config)
 
 .. code:: bash
 
    	  CONFIG_STAGING=y
    	  CONFIG_KS7010=m
 
-- Verify the ks7010 module builds (see shell-utils.sh).
+- Build the module (see shell-utils.sh).
 
 .. code:: bash
 
@@ -47,18 +47,24 @@ Two if you would like to jump straight into doing a series that can be submitted
 
   	  checkpatch --terse --strict --show-types drivers/staging/ks7010/*.c
 
-- Pick 3 types of warnings to fix. (All checkpatch output CHECK/WARNING/ERROR referred to as warnings).
+- Pick 3 types of warnings to fix.
 
-- Typically you would fix all instances of a warning type in a single patch. For the sake of
-   brevity you may prefer to just fix a few of them.
+  All checkpatch output CHECK/WARNING/ERROR referred to as warnings).
 
+- Fix a single warning type.
+    
+  Typically you would fix all instances of a warning type in a single patch. For the sake of
+  brevity you may prefer to just fix a few of them.
+
+  Once you have done fixing a single warning type commit your changes (see next bullet point).
+  
 - Write a thorough, descriptive commit log. You may like to read
 
 .. code:: bash
 
           Documentation/process/submitting-patches.rst (Section 2 - Describe your changes)
 
-- Here is an example git log for a simple checkpatch fix.
+Here is an example git log for a simple checkpatch fix.
 
 .. code:: bash        
 
