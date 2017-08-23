@@ -35,7 +35,8 @@ You may wish to add to your git config
         
 You will also need
 
-.. code-block:: bash
+.. code:: bash
+
 	[user]
 		email = joe@email.com
 		name = Joe Developer
