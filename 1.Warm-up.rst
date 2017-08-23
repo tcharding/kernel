@@ -6,11 +6,15 @@ Build the mainline
 
 1. Clone Linus' tree  
 
-   `git clone --depth=1 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git`
+.. code:: bash   
+
+          git clone --depth=1 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 
 2. Get current running kernel configuration.  
 
-   `zcat /proc/config.gz > $KERNEL_TREE/.config`
+.. code:: bash   
+
+          zcat /proc/config.gz > $KERNEL_TREE/.config
       
 3. Build and install
 
