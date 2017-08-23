@@ -25,8 +25,7 @@ Pro Tip: Limit scope to the following directories;
 Pro Tip: Never respond privately to an email from a kernel
 developer that contains a mailing list in the CC's
 
-- Git: Configure git with your email address and name. All kernel
-changes must contain a tag
+- Git: Configure git with your email address and name. All kernel changes must contain a tag
 
 	Signed-off-by: Joe Developer <joe@email.com>
 
