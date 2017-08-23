@@ -30,11 +30,11 @@ Some tips;
   The Kconfig file for each driver usually contains enough information to see if the driver sparks
   your interest. Otherwise a quick web search will often reveal more information. For example
 
-  	dgnc/ - Multi-port Serial PCI card.
-        vme/devices - Various VME devices.
-        comedi/ - A collection of drivers for a variety of common data acquisition plug-in boards.
-        fbtft/ - The fbtft kernel module is a layer between the driver and the framebuffer subsystem.
-	rtl8*/ - Various RealTek wireless LAN cards.
+  - dgnc/ - Multi-port Serial PCI card.  	
+  - vme/devices - Various VME devices.        
+  - comedi/ - A collection of drivers for a variety of common data acquisition plug-in boards.        
+  - fbtft/ - The fbtft kernel module is a layer between the driver and the framebuffer subsystem.
+  - rtl8*/ - Various RealTek wireless LAN cards.
 
 Either you have found a drive that throws a tonne of checkpatch warnings (some of which you are feel
 you can tackle) or you have picked a driver that inspires you, maybe the code looks nice (or maybe
