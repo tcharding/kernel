@@ -26,11 +26,17 @@ Two if you would like to jump straight into doing a series that can be submitted
    	    CONFIG_STAGING=y
    	    CONFIG_KS7010=m
 
-- Build the module (see shell-utils.sh)
+- Build the kernel (you may like to go on to step 2 while you build)
 
   .. code:: bash
 
-  	    $ make -j9 M=drivers/staging/ks7010
+  	    make -j9 EXTRA-CFLAGS=-W >/dev/null
+
+- Verify ks7010 module built            
+
+  .. code:: bash
+
+            ls drivers/staging/ks7010 | grep '\.ko'
         
 2. Checkpatch
 -------------
@@ -41,7 +47,7 @@ Two if you would like to jump straight into doing a series that can be submitted
 
 	    alias checkpatch="$KERNEL/scripts/checkpatch.pl -f"
 
-- Run `checkpatch` on the C source files in the ks7010 driver
+- Run `checkpatch` on the C source [and/or header] files in the ks7010 driver
         
   .. code:: bash
 
@@ -49,22 +55,24 @@ Two if you would like to jump straight into doing a series that can be submitted
 
 - Pick 3 types of warnings to fix
 
-  *All checkpatch output CHECK/WARNING/ERROR herein referred to as warnings.*
+  *All checkpatch output types CHECK, WARNING, and ERROR herein referred to as warnings.*
+
+  Go on, be brave, don't just do white space fixes :)
 
 - Fix a single warning type
     
   Typically you would fix all instances of a warning type in a single patch. For the sake of
-  brevity you may prefer to just fix a few of them.
+  brevity you may prefer to just fix a few of them. Verify that your change fixes the warning.
 
   Once you have done fixing a single warning type commit your changes (see next bullet point).
   
 - Write a thorough, descriptive commit log
 
-  You may like to read
+  You may like to read (specifically Section 2 - Describe your changes)
 
-  .. code:: bash
+  .. code::
 
-            Documentation/process/submitting-patches.rst (Section 2 - Describe your changes)
+            Documentation/process/submitting-patches.rst
 
             
   Here is an example git log for a simple checkpatch fix.

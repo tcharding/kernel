@@ -160,5 +160,4 @@ applies on top of staging-next, and each builds cleanly.
   .. code:: bash
 
   	    git send-email --to-cover --cc-cover path/to/patch/dir/*.patch
-
-        
+            
