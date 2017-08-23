@@ -27,13 +27,13 @@ Pro Tip: Limit scope to the following directories;
 
 You may wish to add to your git config
 
-
+.. code-block::
  [format]       
 	signOff = true
 
         
 You will also need
-```
+.. code-block::
 	[user]
 		email = joe@email.com
 		name = Joe Developer
