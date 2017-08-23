@@ -14,14 +14,16 @@ Pro Tip: Limit scope to the following directories;
 - include/linux/
 - include/uapi/
 
+1. Tools
+--------     
 
-**1. Set up your tools.**
+Set up your tools
 
-- Editor: The kernel uses a specific coding style, you may like to configure your editor to support this.
+- **Editor:** The kernel uses a specific coding style, you may like to configure your editor to support this.
 
-- Email: All kernel development is done in the open, this means via mailing lists. All patches are
+- **Email:** All kernel development is done in the open, this means via mailing lists. All patches are
   sent inline, this means no attachments.
-- Git: Configure git with your email address and name. All kernel changes must contain a tag
+- **Git:** Configure git with your email address and name. All kernel changes must contain a tag
 
 .. code:: bash
 
@@ -48,7 +50,10 @@ Pro Tip: If you already have git configured with your GitHub username
 then add the real name configuration lines to the git config file
 within your kernel development tree (see task 3 below).
                 
-**2. Subscribe to the following mailing lists.**
+2. Mailing Lists
+----------------   
+
+Subscribe to the following mailing lists
 
 - kernel newbies kernelnewbies@kernelnewbies.org
 - device drivers driverdev-devel@linuxdriverproject.org
@@ -65,7 +70,10 @@ separate mail boxes. Example regex for sorting;
 Pro Tip: Always maintain the complete CC list when responding to mails
 on a kernel mailing list.
         
-**3. Set up development tree.**
+3. Tree
+-------
+
+Set up development tree.
 
 - Clone Greg Kroah-Hartman's tree
 
@@ -86,13 +94,15 @@ Run `checkpatch.pl` against drivers in staging until you find a warning that you
 
 Pro Tip: Do not fix line over 80 warnings.
 
-**5. Fix chosen warning.**
+5. Code
+-------
 
 Fix **all** instances of the warning within the driver you have chosen. While not essential, if a
 job is worth doing it is worth doing properly.
    
-**6. Commit your changes.**
-
+6. Commit
+   ---------
+   
 Commit your changes as a single commit. Write a *correct* git log for the commit. Read
 
 `Documentation/process/submitting-patches.rst`
@@ -104,24 +114,36 @@ Commit your changes as a single commit. Write a *correct* git log for the commit
    to be taken seriously you need to apply effort to learning the
    development process and display that you have done so.
  
-**7. Create and send patch using git**
+7. Submit
+---------
+   
+Create and send patch using git
 
-- git format-patch
-- git send-email
+.. code:: bash
 
+          git format-patch HEAD~
+
+.. code:: bash
+
+          git send-email --to='Joe Developer <joe@gmail.com>' 0001-xxx-xxx.patch
+                    
 Check the TODO file for whom to send the patch to, or use
 
 .. code:: bash
 
           scripts/get_maintainer.pl
 
-**8. Respond to feedback.**
+8. Response          
+-----------
+             
+Respond to feedback you receive from maintainers and/or reviewers.
         
 If asked to do so, fix your patch and re-submit.
 
 Pro Tip: Wait at least two weeks before following up on any email sent to a kernel mailing list.
 
-**Final**
+Final
+-----
 
 At this stage, if all went successfully, you should get an email from
 Greg Kroah-Hartman saying that your patch was merged into

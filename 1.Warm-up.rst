@@ -4,7 +4,8 @@ Warm up Tasks
 Build the mainline
 ------------------
 
-**1. Clone Linus' tree**
+1. Clone Linus' tree
+--------------------
 
 .. code:: bash   
 
@@ -16,7 +17,8 @@ Build the mainline
 
           zcat /proc/config.gz > $KERNEL_TREE/.config
       
-**3. Build and install**
+3. Build and install
+--------------------
 
 - build kernel
 - build modules
@@ -26,4 +28,8 @@ Build the mainline
 Pro Tip: Do not get bogged down configuring the kernel at this stage, for *guaranteed* build use a
 running config as the basis. For quicker build use `make localmodconfig`.
   
-**4. Configure bootloader and boot new kernel.**
+4. Boot
+-------
+   
+Configure boot loader and boot new kernel.
+
