@@ -16,7 +16,7 @@ Track One.
 
   	    scripts/checkpatch.pl --terse --strict --show-types drivers/staging/FOO/*.{ch}
 
-  If you'd like something more challenging you may like to try `sparse` errors.
+  If you'd like something more challenging you may like to try `Sparse` errors.
 
   .. code:: bash
 
@@ -28,7 +28,7 @@ Track One.
   changes to verify you cleared the warning. Remember however that `checkpatch.pl` is just a dumb
   script, understand the reason you are getting the warning before you fix it.
 
-- Fix each warning type (or sparse error) in a single patch. Fix all instances of the warning type
+- Fix each warning type (or Sparse error) in a single patch. Fix all instances of the warning type
   within the driver. Each commit will need a thorough commit log. See section 2 of 
 
   .. code::
@@ -61,7 +61,7 @@ Track One.
 
   	    git format-patch -3 -o path/to/patches --cover-letter
 
-- Ascertain the recipients of your patch set (see the TODO within the driver if present)
+- Ascertain the recipients of your patch set (check the TODO within the driver if present)
 
   .. code:: bash
 
@@ -83,4 +83,5 @@ Track One.
   .. code:: bash
   	    git send-email --to-cover --cc-cover path/to/patch/dir/*.patch
 
+            
 **Win!**
