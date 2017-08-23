@@ -18,6 +18,10 @@ Track One.
 
   If you'd like something more challenging you may like to try `sparse` errors.
 
+  .. code:: bash
+
+            make C=2 M=drivers/staging/FOO
+          
 - Pick three warnings that you feel you can fix. You should be sure to understand fully the code
   changes you are making. Don't bother with 'line over 80' warnings. If you are going to do
   white space fixes be sure to get it correct, look at other code and rerun checkpatch on your
