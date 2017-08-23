@@ -15,7 +15,7 @@ Pro Tip: Limit scope to the following directories;
 - include/uapi/
 
 
-_1. Set up your tools._
+**1. Set up your tools.**
    
 - Editor: The kernel uses a specific coding style, you may like to
 configure your editor to support this.
