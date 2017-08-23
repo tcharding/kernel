@@ -6,56 +6,72 @@ In this track we will be working on an old kernel. The patch series you create h
 to be submitted to the kernel. The process, however, to do a real patch set is the same. See Track
 Two if you would like to jump straight into doing a series that can be submitted to the kernel.
 
-1. Set up the tree
-------------------
+1. Tree
+-------
 
- 	KERNEL=path/to/gregKH/staging/tree
+.. code:: bash
+
+ 	  KERNEL=path/to/gregKH/staging/
    
- - Check out the 4.9 kernel
+- Check out the 4.9 kernel
 
-   	git checkout -b tutorial 69973b8
+.. code:: bash   
 
- - Verify the following (`grep FOO $KERNEL/.config`)
+   	  git checkout -b tutorial 69973b8
 
-   	CONFIG_STAGING=y
-   	CONFIG_KS7010=m
+- Verify the following (`grep FOO $KERNEL/.config`)
 
- - Verify the ks7010 module builds (see shell-utils.sh).
+.. code:: bash
 
-  	$ make -j9 M=drivers/staging/ks7010
+   	  CONFIG_STAGING=y
+   	  CONFIG_KS7010=m
+
+- Verify the ks7010 module builds (see shell-utils.sh).
+
+.. code:: bash
+
+  	  $ make -j9 M=drivers/staging/ks7010
         
 2. Checkpatch
 -------------
 
- - You may like to define a shell alias
+- You may like to define a shell alias
 
-	alias checkpatch="$KERNEL/scripts/checkpatch.pl -f"
+.. code:: bash
 
- - Run `checkpatch` on the C source files in the ks7010 driver
+	  alias checkpatch="$KERNEL/scripts/checkpatch.pl -f"
+
+- Run `checkpatch` on the C source files in the ks7010 driver
         
-  	checkpatch --terse --strict --show-types drivers/staging/ks7010/*.c
+.. code:: bash
 
- - Pick 3 types of warnings to fix. (All checkpatch output CHECK/WARNING/ERROR referred to as warnings).
+  	  checkpatch --terse --strict --show-types drivers/staging/ks7010/*.c
 
- - Typically you would fix all instances of a warning type in a single patch. For the sake of
+- Pick 3 types of warnings to fix. (All checkpatch output CHECK/WARNING/ERROR referred to as warnings).
+
+- Typically you would fix all instances of a warning type in a single patch. For the sake of
    brevity you may prefer to just fix a few of them.
 
- - Write a thorough, descriptive commit log. You may like to read
+- Write a thorough, descriptive commit log. You may like to read
 
-        Documentation/process/submitting-patches.rst (Section 2 - Describe your changes)
+.. code:: bash
 
- - Here is an example git log for a simple checkpatch fix.
-        
-	staging: ks7010: remove unnecessary parenthesis
+          Documentation/process/submitting-patches.rst (Section 2 - Describe your changes)
 
-	Checkpatch emits CHECK: Unnecessary parentheses.
+- Here is an example git log for a simple checkpatch fix.
 
-	Remove unnecessary parentheses.
+.. code:: bash        
 
- - Build the module. All patches to the kernel must build cleanly. This means every patch within a
-   series must build cleanly, not just the last one.
+	  staging: ks7010: remove unnecessary parenthesis
+          
+	  Checkpatch emits CHECK: Unnecessary parentheses.
+          
+	  Remove unnecessary parentheses.
 
- - Repeat for the other two warning types you picked.
+- Build the module. All patches to the kernel must build cleanly. This means every patch within a
+  series must build cleanly, not just the last one.
+  
+- Repeat for the other two warning types you picked.
 
 3. Patch Set
 ------------
@@ -63,20 +79,31 @@ Two if you would like to jump straight into doing a series that can be submitted
 By this stage you should have three commits in your git index, each fixing a specific 'warning'
 type. Each commit is described fully in the commit log and each commit builds cleanly.
 
- - Read through the diff of all three commits checking for any mistakes.
+- Read through the diff of all three commits checking for any mistakes.
 
-  	git log --color=always --patch --reverse HEAD~~~.. | less
+.. code:: bash
 
- - Now use git to output a patch series
+          git log --color=always --patch --reverse HEAD~~~.. | less
 
-	git format-patch -3 -o path/to/patch/dir --cover-letter
+- Now use git to output a patch series
 
- - Write the cover letter. For a simple series like this a brief sentence describing the series will
-   suffice.
+.. code:: bash  
 
- - Email the patch set to your self. This is a useful step when getting started so you can verify
-   that everything looks good.
+	  git format-patch -3 -o path/to/patch/dir --cover-letter
 
+- Write the cover letter. For a simple series like this a brief sentence describing the series will
+  suffice.
+
+- Email the patch set to your self. This is a useful step when getting started so you can verify
+  that everything looks good.
+
+  .. code:: bash
+
+  	    git send-email --to='me@mail.com' path/to/patch/dir/*.patch
+
+Profit
+------
+            
 Now (in Real Life) you would email this patch set to the device driver mailing list. Well done. Now
 (or later) you can repeat this process on top of the current staging-next branch and submit your
 first patch set to the Linux kernel (see Track Two for more specifics).
