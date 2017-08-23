@@ -133,6 +133,8 @@ applies on top of staging-next, and each builds cleanly.
 
 - Output a linked patch set ready for sending using git
 
+  .. code:: bash
+
 	git format-patch -3 -o path/to/patch/dir --cover-letter
 
 - Write the cover letter. For a simple series like this a brief sentence describing the series will
@@ -148,11 +150,15 @@ applies on top of staging-next, and each builds cleanly.
   Kroah-Hartman, and any other maintainers listed by the script (unless directed otherwise by the
   TODO file).
 
-	scripts/get_maintainer.pl path/to/patch/dir/*.patch
+  .. code:: bash
+
+	    scripts/get_maintainer.pl path/to/patch/dir/*.patch
 
 - You can send the series using git. If you add the `To:` and `Cc:` headers to the cover letter then
   the following command does what you need
 
-  	git send-email --to-cover --cc-cover path/to/patch/dir/*.patch
+  .. code:: bash
+
+  	    git send-email --to-cover --cc-cover path/to/patch/dir/*.patch
 
         
