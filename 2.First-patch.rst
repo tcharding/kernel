@@ -78,7 +78,7 @@ Run `checkpatch.pl` against drivers in staging until you find a warning that you
 
  .. code:: bash
 
-	`scripts/checkpatch.pl -f drivers/staging/FOO/*.c`
+	scripts/checkpatch.pl -f drivers/staging/FOO/*.c
 
 Pro Tip: Do not fix line over 80 warnings.
 
