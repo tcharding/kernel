@@ -23,7 +23,9 @@ Pro Tip: Limit scope to the following directories;
   sent inline, this means no attachments.
 - Git: Configure git with your email address and name. All kernel changes must contain a tag
 
-  `Signed-off-by: Joe Developer <joe@email.com>`
+.. code:: bash
+
+          Signed-off-by: Joe Developer <joe@email.com>
 
 You may wish to add to your git config
 
@@ -56,7 +58,9 @@ Pro Tip: Do not bother subscribing to LKML at this stage.
 At this stage you may like to sort emails from mailing lists into
 separate mail boxes. Example regex for sorting;
 
-`^List-ID:.*<driverdev-devel.linuxdriverproject.org>$`
+.. code:: bash
+
+          ^List-ID:.*<driverdev-devel.linuxdriverproject.org>$
 
 Pro Tip: Always maintain the complete CC list when responding to mails
 on a kernel mailing list.
@@ -107,7 +111,9 @@ Commit your changes as a single commit. Write a *correct* git log for the commit
 
 Check the TODO file for whom to send the patch to, or use
 
-`scripts/get_maintainer.pl`
+.. code:: bash
+
+          scripts/get_maintainer.pl
 
 **8. Respond to feedback.**
         
