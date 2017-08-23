@@ -8,6 +8,7 @@ NOTE: Do not submit patches to any part of the kernel outside of
 drivers/staging whilst getting started with kernel development.
 
 Pro Tip: Limit scope to the following directories;
+
 - Documentation/process/
 - drivers/staging/
 - include/linux/
