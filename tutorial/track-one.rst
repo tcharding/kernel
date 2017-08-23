@@ -49,7 +49,7 @@ Two if you would like to jump straight into doing a series that can be submitted
 
 - Pick 3 types of warnings to fix
 
-  All checkpatch output CHECK/WARNING/ERROR referred to as warnings.
+  *All checkpatch output CHECK/WARNING/ERROR herein referred to as warnings.*
 
 - Fix a single warning type
     
@@ -119,5 +119,5 @@ Profit
             
 Now (in Real Life) you would email this patch set to the device driver mailing list. Well done. Now
 (or later) you can repeat this process on top of the current staging-next branch and submit your
-first patch set to the Linux kernel (see Track Two for more specifics).
+first patch set to the Linux kernel.
   
