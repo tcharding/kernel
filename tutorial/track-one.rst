@@ -26,7 +26,7 @@ Two if you would like to jump straight into doing a series that can be submitted
    	  CONFIG_STAGING=y
    	  CONFIG_KS7010=m
 
-- Build the module (see shell-utils.sh).
+- Build the module (see shell-utils.sh)
 
 .. code:: bash
 
@@ -47,34 +47,38 @@ Two if you would like to jump straight into doing a series that can be submitted
 
   	  checkpatch --terse --strict --show-types drivers/staging/ks7010/*.c
 
-- Pick 3 types of warnings to fix.
+- Pick 3 types of warnings to fix
 
   All checkpatch output CHECK/WARNING/ERROR referred to as warnings).
 
-- Fix a single warning type.
+- Fix a single warning type
     
   Typically you would fix all instances of a warning type in a single patch. For the sake of
   brevity you may prefer to just fix a few of them.
 
   Once you have done fixing a single warning type commit your changes (see next bullet point).
   
-- Write a thorough, descriptive commit log. You may like to read
+- Write a thorough, descriptive commit log
 
-.. code:: bash
+  You may like to read
 
-          Documentation/process/submitting-patches.rst (Section 2 - Describe your changes)
+  .. code:: bash
 
-Here is an example git log for a simple checkpatch fix.
+            Documentation/process/submitting-patches.rst (Section 2 - Describe your changes)
 
-.. code:: bash        
+   Here is an example git log for a simple checkpatch fix.
 
-	  staging: ks7010: remove unnecessary parenthesis
+   .. code:: bash        
+
+	     staging: ks7010: remove unnecessary parenthesis
           
-	  Checkpatch emits CHECK: Unnecessary parentheses.
+	     Checkpatch emits CHECK: Unnecessary parentheses.
           
-	  Remove unnecessary parentheses.
+	     Remove unnecessary parentheses.
 
-- Build the module. All patches to the kernel must build cleanly. This means every patch within a
+- Build the module.
+
+  All patches to the kernel must build cleanly. This means every patch within a
   series must build cleanly, not just the last one.
   
 - Repeat for the other two warning types you picked.
