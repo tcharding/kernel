@@ -23,7 +23,7 @@ Pro Tip: Limit scope to the following directories;
   sent inline, this means no attachments.
 - Git: Configure git with your email address and name. All kernel changes must contain a tag
 
-	`Signed-off-by: Joe Developer <joe@email.com>`
+  `Signed-off-by: Joe Developer <joe@email.com>`
 
 You may wish to add to your git config
 
@@ -36,17 +36,18 @@ You will also need
 	[user]
 		email = joe@email.com
 		name = Joe Developer
-```
+                ```
+                
 Pro Tip: If you already have git configured with your GitHub username
 then add the real name configuration lines to the git config file
 within your kernel development tree (see task 3 below).
                 
 **2. Subscribe to the following mailing lists.**
 
-   - kernel newbies kernelnewbies@kernelnewbies.org
-   - device drivers driverdev-devel@linuxdriverproject.org
+- kernel newbies kernelnewbies@kernelnewbies.org
+- device drivers driverdev-devel@linuxdriverproject.org
 
-   Pro Tip: Do not bother subscribing to LKML at this stage.
+Pro Tip: Do not bother subscribing to LKML at this stage.
 
 At this stage you may like to sort emails from mailing lists into
 separate mail boxes. Example regex for sorting;
@@ -58,27 +59,32 @@ on a kernel mailing list.
         
 **3. Set up development tree.**
 
-   - Clone Greg Kroah-Hartman's tree
-     https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git/
+- Clone Greg Kroah-Hartman's tree
 
-   - Set up tracking branch on staging-next (or staging-testing)
+  `https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git/`
+
+- Set up tracking branch on staging-next (or staging-testing)
 
    Pro Tip: Work off of staging-next but make sure your patches apply
    to staging-testing before you submit them to the driver dev mailing
    list.
 
-**4. Run checkpatch.pl against drivers in staging until you find a warning that you feel you can fix.**
+**4. Run checkpatch.**
+
+Run `checkpatch.pl` against drivers in staging until you find a warning that you feel you can fix.**
    
-   	`scripts/checkpatch.pl -f drivers/staging/FOO/*.c`
+`scripts/checkpatch.pl -f drivers/staging/FOO/*.c`
 
-   Pro Tip: Do not fix line over 80 warnings.
+Pro Tip: Do not fix line over 80 warnings.
 
-**5. Fix *all* instances of the warning within the driver you have chosen. While not essential, if a
-job is worth doing it is worth doing properly.**
+**5. Fix chosen warning.**
+
+Fix *all* instances of the warning within the driver you have chosen. While not essential, if a
+job is worth doing it is worth doing properly.
    
-**6. Commit your changes as a single commit**
+**6. Commit your changes.**
 
-Write a *correct* git log for the commit. Read
+Commit your changes as a single commit. Write a *correct* git log for the commit. Read
 
 	Documentation/process/submitting-patches.rst
 
@@ -91,8 +97,8 @@ Write a *correct* git log for the commit. Read
  
 **7. Create and send patch using git**
 
-   - git format-patch
-   - git send-email
+- git format-patch
+- git send-email
 
    Check the TODO file for whom to send the patch to, or use
 
