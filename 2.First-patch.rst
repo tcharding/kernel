@@ -28,6 +28,7 @@ Pro Tip: Limit scope to the following directories;
 You may wish to add to your git config
 
 .. code:: bash
+
 	[format]       
 		signOff = true
 
