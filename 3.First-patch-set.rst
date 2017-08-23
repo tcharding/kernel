@@ -89,11 +89,15 @@ By now you should have three commits in your git index. Each fixing a specific c
   the patch (unified diff format). All patches are submitted to kernel mailing lists inline. You can
   review your patches using the following `git` command
 
-  	git log --color=always --patch --reverse HEAD~~~.. | less 
+  .. code:: bash
+
+            git log --color=always --patch --reverse HEAD~~~.. | less 
 
 - If you need to make changes to previous commit, including the commit log, you can use
 
-  	git rebase -i HEAD~~~
+  .. code:: bash
+
+  	    git rebase -i HEAD~~~
 
   If you have never rebased commits before then it can take some getting used to. git does a good
   job holding your hand during rebase (if you read the output).
