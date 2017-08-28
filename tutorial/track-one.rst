@@ -57,7 +57,8 @@ Two if you would like to jump straight into doing a series that can be submitted
 
   *All checkpatch output types CHECK, WARNING, and ERROR herein referred to as warnings.*
 
-  Go on, be brave, don't just do white space fixes :)
+  Go on, be brave, don't just do white space fixes :) You may like to save the output from
+  checkpatch to a file.
 
 - Fix a single warning type
     
@@ -65,6 +66,10 @@ Two if you would like to jump straight into doing a series that can be submitted
   brevity you may prefer to just fix a few of them. Verify that your change fixes the warning.
 
   Once you have done fixing a single warning type commit your changes (see next bullet point).
+
+  You may like to run checkpatch again after you have made your change to ensure you have not
+  introduced any new warnings. Alternatively `diff` the checkpatch output against the original
+  output that you saved to confirm you have cleared the warning.
   
 - Write a thorough, descriptive commit log
 
