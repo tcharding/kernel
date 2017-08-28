@@ -67,8 +67,8 @@ Two if you would like to jump straight into doing a series that can be submitted
 
   Once you have done fixing a single warning type commit your changes (see next bullet point).
 
-  You may like to run checkpatch again after you have made your change to ensure you have not
-  introduced any new warnings. Alternatively `diff` the checkpatch output against the original
+  You may like to run `checkpatch` again after you have made your change to ensure you have not
+  introduced any new warnings. Alternatively, `diff` the checkpatch output against the original
   output that you saved to confirm you have cleared the warning.
   
 - Write a thorough, descriptive commit log
@@ -131,8 +131,8 @@ type. Each commit is described fully in the commit log and each commit builds cl
 
             git send-email --to='me@mail.com' path/to/patch/dir/*.patch
 
-Profit
-------
+Final
+-----
             
 Now, in real life, you would email this patch set to the device driver mailing list. Well done. Now
 (or later) you can repeat this process on top of the current staging-next branch and submit your
