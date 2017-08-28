@@ -17,6 +17,18 @@ Kernel Build Errors
     CONFIG_SYSTEM_TRUSTED_KEYRING=n
     # CONFIG_SYSTEM_TRUSTED_KEYS=""
 
+- Make error
+
+	make[2]: *** [silentoldconfig] Error 1
+        make[1]: *** [silentoldconfig] Error 2
+        make: *** No rule to make target 'include/config/auto.conf', needed by 'include/config/kernel.release'.  Stop.
+        make: *** Waiting for unfinished jobs....
+
+
+  Can be resolved by running
+
+	yes "" | make oldconfig
+        
 - If you want to start the build process fresh
 
 2. Run `make mrproper` (this removes .config)
