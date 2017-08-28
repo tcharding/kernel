@@ -25,5 +25,22 @@ Cheat Sheet
 
      scripts/checkpatch.pl --terse --strict --show-types drivers/staging/FOO/*.{ch}
 
+- Git view commits in patch format
 
-       
+  .. code:: bash
+
+     git log --color=always --patch --reverse HEAD~~~.. | less
+
+- Git format patch
+
+  .. code:: bash
+
+     git format-patch -3 -o path/to/patch/dir --cover-letter
+
+- Git send email     
+
+  .. code:: bash
+
+     git send-email --to='me@gmail.com' path/to/patch/dir/*.patch
+     git send-email --to-cover --cc-cover path/to/patch/dir/*.patch
+
