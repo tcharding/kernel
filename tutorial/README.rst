@@ -32,7 +32,7 @@ slot. If you are most interested in the process of kernel development without be
 stage, in exactly what you are working on then choose this track. This is also the easier of the two.
 
 - More structured, easier.
-- Based on an old kernel version.
+- Based on an old kernel version (v4.9).
 - Work on ks7010 Wi-Fi driver.
 - Should easily complete within 2 hours.
 
