@@ -89,6 +89,10 @@ Two if you would like to jump straight into doing a series that can be submitted
 
   All patches to the kernel must build cleanly. This means every patch within a
   series must build cleanly, not just the last one.
+
+  .. code:: bash
+
+            make -j9 M=drivers/staging/ks7010 >/dev/null
   
 - Repeat for the other two warning types you picked
 
