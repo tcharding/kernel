@@ -13,6 +13,8 @@ Tutorial Prerequisites
   for the kernel to build during the tutorial and you think you will attempt the easier of the two
   tracks then you should checkout the 4.9 kernel and build it.
 
-   git checkout -b tutorial 69973b8
+  .. code:: bash
+
+   	git checkout -b tutorial 69973b8
         
 
