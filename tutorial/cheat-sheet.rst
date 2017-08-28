@@ -18,3 +18,12 @@ Cheat Sheet
   .. code:: bash  
 
      make -jN EXTRA-CFLAGS=-W M=drivers/staging/FOO >/dev/null
+
+- Checkpatch     
+
+  .. code:: bash
+
+     scripts/checkpatch.pl --terse --strict --show-types drivers/staging/FOO/*.{ch}
+
+
+       
