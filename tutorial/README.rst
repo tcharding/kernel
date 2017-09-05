@@ -24,8 +24,10 @@ on kernelnewbies_.
 .. _blog: http://tobin.cc/blog/kernel-dev-1
 .. _kernelnewbies: https://kernelnewbies.org/FirstKernelPatch
 
-Track One
+Track One_
 ---------
+
+.. _One: track-one.rst
 
 This track builds on the prerequisites and aims to be easily achievable within the two hour time
 slot. If you are most interested in the process of kernel development without being bothered, at this
@@ -36,8 +38,10 @@ stage, in exactly what you are working on then choose this track. This is also t
 - Work on ks7010 Wi-Fi driver.
 - Should easily complete within 2 hours.
 
-Track Two
+Track Two_
 ---------
+
+.. _Two: track-two.rst
 
 This track has less hand holding, you do actual real work that can be submitted to the
 kernel. Choose this track if you like to explore more, you are more experienced or you don't mind

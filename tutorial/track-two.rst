@@ -8,7 +8,7 @@ Track One.
 
 - Base your series off of the staging-next branch of GregKH's staging tree.
 
-- Pick a driver to work on from `drivers/staging/` (see ../3.First-patch-series.rst for tips).
+- Pick a driver to work on from `drivers/staging/` (see ../3.First-patch-set.rst for tips).
 
 - Run checkpatch on 'your' driver
 
