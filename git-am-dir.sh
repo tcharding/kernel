@@ -71,11 +71,17 @@ apply () {
     # apply each patches
     for file in $(ls $patch_dir)
     do
-        # check file is not a cover letter
-        [ ${file:0:4} == "0000" ] && continue
+	# Skip archives, apply, and old versions.
+	if [ -d "$patch_dir/$file" ]; then
+	    continue
+	fi
 
-        # check for directories
-        [ -d $file ] && continue
+	sub=${file:0:4}	# 0000-foo-bar.patch
+	subv=${file:3:4}	# v4-0000-foo-bar.patch
+	if [ $sub == "0000" ] || [ $subv == "0000" ]; then
+	    # echo "found cover-letter: $patch"
+	    continue
+	fi
         
         _patch="$patch_dir/$file"
         ensure git apply --check $_patch

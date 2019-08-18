@@ -16,6 +16,11 @@ main() {
     fi
 
     for patch in $(ls $path); do
+	# Skip archives, apply, and old versions.
+	if [ -d "$path/$patch" ]; then
+	    continue
+	fi
+
 	sub=${patch:0:4}	# 0000-foo-bar.patch
 	subv=${patch:3:4}	# v4-0000-foo-bar.patch
 	if [ $sub == "0000" ] || [ $subv == "0000" ]; then
