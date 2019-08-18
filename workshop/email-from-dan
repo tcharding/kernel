@@ -1,0 +1,54 @@
+Date: Fri, 19 Jul 2019 12:36:58 +0300
+From: Dan Carpenter <dan.carpenter@oracle.com>
+To: "Tobin C. Harding" <me@tobin.cc>
+Cc: Kernelnewbies <kernelnewbies@kernelnewbies.org>,
+        Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+        driverdev-devel@linuxdriverproject.org
+Subject: Re: [OSSNA] Intro to kernel hacking tutorial
+
+On Fri, Jul 05, 2019 at 12:50:55PM +1000, Tobin C. Harding wrote:
+> Outcome will (hopefully) be a small patch set into drivers/staging/.
+> (Don't worry Greg only one group got to this stage last time, you
+> won't get flooded with patches :)
+
+We're good at reviewing floods of patches.  Send away.
+
+In the end what we want is people who will take over a driver and
+understand it completely and become the maintainer.  We've had a few
+people that did appointed themselves to become the maintainer of a
+random driver and move it out of staging.  But even if people don't make
+it all the way to become a maintainer, it's nice when they start down
+that path by focusing on one driver and trying to understand it as much
+as possible.
+
+Most of the time when you look at a new staging driver, then you do want
+to clean up the white space just because it's hard to look at
+non-standard code.  So that's the first step.  But then maybe start at
+the probe and release functions and clean it up.  Keep your eyes open
+to any other mistakes or bugs you see.  Write them down.  Then the
+ioctls.  Etc.  Look at the TODO too.
+
+The other thing I wish people knew was about the relationship with
+maintainers.  When you start out, you're virtually anonymous for the
+first couple patchsets.  We get so many and they blend together so we
+don't remember your name.  So don't think that we mean anything
+personally if we don't apply your patch.  We have forgotten about the
+patch as soon as we reply to it.  Don't panic and resend quickly.  You
+will be too stressed.  Wait until the next day.
+
+In staging we really want to apply patches (unless it's in staging
+because we're going to remove the code).  I get annoyed with other
+staging reviewers who NAK patches because "I don't like churn" or
+whatever.
+
+On the other hand, patches just "silencing checkpatch.pl" is not a valid
+justification for sending a patch.  Patches should make the code more
+readable.
+
+Anyway, maintainers are not monsters.  Very few people have made me
+annoyed to the point where I refuse to review their code.  And everyone
+else is in my good books so that's fine.
+
+regards,
+dan carpenter
+
