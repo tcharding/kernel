@@ -37,4 +37,4 @@ That's it.  Pretty simple to describe, harder to do.  See if you can put
 together a few patches that clearly improve the driver.  This is a good first
 step in understanding the driver and going on to working on it more extensively.
 
-Once you have a few patches queue up see `./patch-series.rst` if you need to.
+Once you have a few patches queued up see `./patch-series.rst` if you need to.
