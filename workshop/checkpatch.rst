@@ -6,7 +6,7 @@ This project will use one of the kernel's intree tools to find a few things to
 work on.  `scripts/checkpatch.pl` is a static analysis tool useful for finding
 code that may need patching.  It is not the only intree tool, it is not even the
 only intree static analysis tool.  It is however very useful and if you plan on
-sending *any* patches to LKML you should be very familiar with it.  By *very* I
+sending any patches to LKML you should be very familiar with it.  By *very* I
 mean you should be running it on every patch you send to LKML.  Trust me on this
 one, it will save you a lot of embarrassment.
 
@@ -47,8 +47,7 @@ So, for example
 	most/core.c:63: CHECK:UNCOMMENTED_DEFINITION: spinlock_t definition without comment
 	most/core.c:306: WARNING:LONG_LINE: line over 80 characters
 	most/core.c:345: CHECK:UNNECESSARY_PARENTHESES: Unnecessary parentheses around 	'c->iface->interface != ITYPE_MEDIALB_DIM2'
-        [snip]
-	total: 0 errors, 2 warnings, 1 checks, 338 lines checked
+        ...
 
 We could look at all the lines indicated by CHECK:UNNECESSARY_PARENTHESES and
 check if the parentheses are really unnecessary.  By the way, this check
@@ -57,6 +56,8 @@ to **not** make the code harder to understand.  As Dan Carpenter explains in
 `./email-from-dan` doing code changes just to quieten a tool is not what you
 want to do, we want to make sure we are improving the code as well as clearing
 the warning.
+
+The kernel coding style is documented in `$KTREE/Documentation/process/coding-style.rst`.
 
 Go ahead, find some code with bad smells and see if you can clean it up.  Make
 sure you run checkpatch again after you make a change to see if the warning is cleared.

@@ -43,6 +43,10 @@ first series to LKML you could explicitly state something like 'no testing done,
 all patches build and checkpatch cleanly'.  Please make sure any claims you make
 are true.
 
+Optionally, at this stage, you can just set the To header to point to your own
+email address then send the series to yourself as a test run using the command
+below. If it all looks good you can then continue.
+
 In the cover letter set the To, and CC headers appropriately, since we patched
 drivers/staging/ the patches go to the driver development mailing list.  To find
 out who else to CC run `scripts/get_maintainer.pl` on either the file you
@@ -54,7 +58,7 @@ people.  Be sure to also CC the driver dev mailing list and the LKML main
 mailing list.  All kernel patches **must** be sent to a mailing list, typically
 a subsystem mailing list.  CC'ing LKML main list is optional.
 
-Feel free to CC Tobin C. Harding <me@tobin.cc> if you want.
+Feel free to CC me, Tobin C. Harding <me@tobin.cc> if you want.
 
 Send
 ====

@@ -8,21 +8,21 @@ Getting started
 We will be working off of Greg Kroah-Hartman's staging tree, specifically the
 `staging-next` branch.
 
-There are USB drives available with Greg's staging tree on them (including the
-whole index).
-
-Please be considerate of the conference Wi-Fi if you decide to clone this tree,
-you can use `--depth=1` to restrict the download.
-
 If you already know how to checkout the `staging-next` branch of Greg's staging
 tree feel free to skip ahead.
 
-Cloned tree
------------
+You will need a local copy of the Linux kernel tree.  If you have one already
+you can jump down to 'Using a remote' below.
+
+
+Cloning the tree
+----------------
+
+There is a git server running locally so we do not overload the conference Wi-Fi.
 
 If you have not got a copy of the Linux kernel tree on your local machine then
 you may clone it from the NUC attached to hotspot `oss-kdev`.  If the whole room
-runs this then the NUC is going to choke so please consider just cloning with
+does this then the NUC is going to choke so please consider just cloning with
 `--depth=1`.  Also when testing I was only getting 4.7 MiB/s during clone (and
 the whole tree is over 2 Gigabytes so please be patient.
 
