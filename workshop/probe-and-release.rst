@@ -22,14 +22,15 @@ conference but it is something to keep in mind.
 
 The steps involved, as suggested above are
 
-1. Pick a driver in ``drivers/staging`` that you like the look of.
-2. Give it a quick look over for glaring style issues.  Like Dan says, this is
-   mainly because reading code that has crazy style issues can be cumbersome.
-   Fix stlye/whitespace issues first.
-3. Have a look at the probe/release functions in more detail.
-   - You could checkpatch these functions fully
-   - Refactor
-   - Ensure they do everything that is expected of a probe/release function for this type of driver.
+- Pick a driver in ``drivers/staging`` that you like the look of.
+- Give it a quick look over for glaring style issues.  Like Dan says, this is
+  mainly because reading code that has crazy style issues can be cumbersome.
+  Fix stlye/whitespace issues first.
+- Have a look at the probe/release functions in more detail.
+
+  - You could checkpatch these functions fully
+  - Refactor
+  - Ensure they do everything that is expected of a probe/release function for this type of driver.
 
 
 That's it.  Pretty simple to describe, harder to do.  See if you can put
