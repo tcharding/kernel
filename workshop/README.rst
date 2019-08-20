@@ -54,5 +54,6 @@ Thanks,
 Tobin.
 
 .. _setup: ./setup.rst
+.. _checkpatch: ./checkpatch.rst
 .. _probe-and-release: ./probe-and-release.rst
 .. _further-tools: ./further-tools.rst

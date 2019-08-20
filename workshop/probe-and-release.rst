@@ -29,8 +29,7 @@ The steps involved, as suggested above are
 3. Have a look at the probe/release functions in more detail.
    - You could checkpatch these functions fully
    - Refactor
-   - Ensure they do everything that is expected of a probe/release function for
-     this type of driver.
+   - Ensure they do everything that is expected of a probe/release function for this type of driver.
 
 
 That's it.  Pretty simple to describe, harder to do.  See if you can put
