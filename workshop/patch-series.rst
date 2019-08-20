@@ -17,13 +17,13 @@ Create a patch set with
 	mkdir /tmp/patches
 	git format-patch -o /tmp/patches -X --cover-letter
 
-where `X` is the number of commits you want to include.       
+where ``X`` is the number of commits you want to include.
 
 Re-check
 ========
 
 Re-check that you did not make any mistakes by running checkpatch against your
-patches (you won't need the `--file` option this time).  (Please note;
+patches (you won't need the ``--file`` option this time).  (Please note;
 checkpatch does not like parsing the cover-letter.)  Also make sure you build
 the kernel for each patch of the series i.e., after each commit make sure the
 kernel builds.  You may like to save the output from checkpatch without your
@@ -52,7 +52,7 @@ address a patch is to send it to the maintainer[s] and CC everyone else
 including mailing lists.  Using this method, and since we patched
 drivers/staging/, the patches go 'To' Greg (and any other maintainer) and 'Cc'
 to the driver development mailing list.  To find out who else should be included
-run `scripts/get_maintainer.pl` on either the file you patched or the patch
+run ``scripts/get_maintainer.pl`` on either the file you patched or the patch
 itself.  You don't need to include everyone returned by that command but you
 should at a minimum include the maintainers (sometimes listed as 'supporter')
 and one mailing list.  It is nice to also CC a developer if they have a high
@@ -75,10 +75,10 @@ consuming, having random changes in a patch makes it harder to review.  Even
 random whitespace changes should be put in their own patch not mixed into
 another patch.
 
-You can now send you patch series using `git send-email --to-cover --cc-cover /tmp/patches/*.patch`
+You can now send you patch series using ``git send-email --to-cover --cc-cover /tmp/patches/*.patch``
 
 If you have not done so already then now is a good time to read the email from
-Dan Carpenter `./email-from-dan`.  Along with Greg, Dan is a very active
+Dan Carpenter ``./email-from-dan``.  Along with Greg, Dan is a very active
 reviewer of staging patches.  Both these reviewers are extremely welcoming to
 new comers and particularly patient.  They are happy to see you learn.  Please
 be respectful of their time by being diligent and heeding any advice they

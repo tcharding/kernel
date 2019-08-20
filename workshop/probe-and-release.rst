@@ -3,7 +3,7 @@ Probe and Release
 =================
 
 This project is based on an email I received from Dan Carpenter on LKML.  You
-can read the full email in `./email-from-dan` and here is the paragraph that
+can read the full email in ``./email-from-dan`` and here is the paragraph that
 inspired this project:
 
     Most of the time when you look at a new staging driver, then you do want
@@ -22,7 +22,7 @@ conference but it is something to keep in mind.
 
 The steps involved, as suggested above are
 
-1. Pick a driver in `drivers/staging` that you like the look of.
+1. Pick a driver in ``drivers/staging`` that you like the look of.
 2. Give it a quick look over for glaring style issues.  Like Dan says, this is
    mainly because reading code that has crazy style issues can be cumbersome.
    Fix stlye/whitespace issues first.
@@ -37,4 +37,4 @@ That's it.  Pretty simple to describe, harder to do.  See if you can put
 together a few patches that clearly improve the driver.  This is a good first
 step in understanding the driver and going on to working on it more extensively.
 
-Once you have a few patches queued up see `./patch-series.rst` if you need to.
+Once you have a few patches queued up see ``./patch-series.rst`` if you need to.

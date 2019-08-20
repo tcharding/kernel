@@ -3,7 +3,7 @@ Checkpatch your way to glory
 ============================
 
 This project will use one of the kernel's intree tools to find a few things to
-work on.  `scripts/checkpatch.pl` is a static analysis tool useful for finding
+work on.  ``scripts/checkpatch.pl`` is a static analysis tool useful for finding
 code that may need patching.  It is not the only intree tool, it is not even the
 only intree static analysis tool.  It is however very useful and if you plan on
 sending any patches to LKML you should be very familiar with it.  By *very* I
@@ -17,7 +17,7 @@ By design, we are not trying to do complex changes, just some small simple
 patches to get your feet wet.
 
 First off, you may like to define a shell alias.  Then run checkpatch against
-various directories in `drivers/staging` until you find one that looks
+various directories in ``drivers/staging`` until you find one that looks
 interesting i.e., achievable.
 
 .. code:: bash
@@ -53,11 +53,11 @@ We could look at all the lines indicated by CHECK:UNNECESSARY_PARENTHESES and
 check if the parentheses are really unnecessary.  By the way, this check
 requires some knowledge of kernel coding style, in this case the typical rule is
 to **not** make the code harder to understand.  As Dan Carpenter explains in
-`./email-from-dan` doing code changes just to quieten a tool is not what you
+``./email-from-dan`` doing code changes just to quieten a tool is not what you
 want to do, we want to make sure we are improving the code as well as clearing
 the warning.
 
-The kernel coding style is documented in `$KTREE/Documentation/process/coding-style.rst`.
+The kernel coding style is documented in ``$KTREE/Documentation/process/coding-style.rst``.
 
 Go ahead, find some code with bad smells and see if you can clean it up.  Make
 sure you run checkpatch again after you make a change to see if the warning is cleared.
@@ -65,7 +65,7 @@ sure you run checkpatch again after you make a change to see if the warning is c
 You probably want to create a new branch to work on.
 
 When committing each change please follow the guidelines in Section 2 'Describe
-your changes' of `$KTREE/Documentation/process/submitting-patches.rst`.
+your changes' of ``$KTREE/Documentation/process/submitting-patches.rst``.
 
 Once you have three commits on your branch you are ready to create and submit
-the series.  Please see `patch-series.rst`.
+the series.  Please see ``patch-series.rst``.

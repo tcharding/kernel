@@ -6,9 +6,9 @@ Getting started
 ===============
 
 We will be working off of Greg Kroah-Hartman's staging tree, specifically the
-`staging-next` branch.
+``staging-next`` branch.
 
-If you already know how to checkout the `staging-next` branch of Greg's staging
+If you already know how to checkout the ``staging-next`` branch of Greg's staging
 tree feel free to skip ahead.
 
 You will need a local copy of the Linux kernel tree.  If you have one already
@@ -21,9 +21,9 @@ Cloning the tree
 There is a git server running locally so we do not overload the conference Wi-Fi.
 
 If you have not got a copy of the Linux kernel tree on your local machine then
-you may clone it from the NUC attached to hotspot `oss-kdev`.  If the whole room
+you may clone it from the NUC attached to hotspot ``oss-kdev``.  If the whole room
 does this then the NUC is going to choke so please consider just cloning with
-`--depth=1`.  Also when testing I was only getting 4.7 MiB/s during clone (and
+``--depth=1``.  Also when testing I was only getting 4.7 MiB/s during clone (and
 the whole tree is over 2 Gigabytes so please be patient.
 
 - SSID: oss-kdev
@@ -33,7 +33,7 @@ the whole tree is over 2 Gigabytes so please be patient.
                   
 	git clone --depth=1 git://192.168.8.6/staging
         
-This will clone Greg's tree with `staging-next` branch already checked out.  If
+This will clone Greg's tree with ``staging-next`` branch already checked out.  If
 you cloned the tree some other way you can check out the branch with
 
 .. code:: bash
@@ -54,7 +54,7 @@ following to your git config file
 		fetch = +refs/heads/*:refs/remotes/staging/*
 		pushurl = no_push	
 
-Fetch and then checkout the `staging-next` branch
+Fetch and then checkout the ``staging-next`` branch
 
 .. code:: bash
 
@@ -80,9 +80,9 @@ Then select *all* staging drivers under
 
 (If you already know which driver you want to hack on just select it.)
 
-Set the kernel building now to save time later `make -j9`.  Once the build
-completes you can verify that staging drivers were built by `cd`ing into
-`drivers/staging` and running
+Set the kernel building now to save time later ``make -j9``.  Once the build
+completes you can verify that staging drivers were built by ``cd``ing into
+``drivers/staging`` and running
 
 .. code:: bash
 
