@@ -29,6 +29,8 @@ the whole tree is over 2 Gigabytes so please be patient.
 	SSID: oss-kdev
 	passphrase: oss-kdev-pass
 
+.. code:: bash
+                  
 	git clone --depth=1 git://192.168.8.6/staging
         
 This will clone Greg's tree with `staging-next` branch already checked out.  If
@@ -40,7 +42,7 @@ Using a remote
 --------------
 
 If you have already have a local copy of the kernel tree on you can add the
-following to your git config file and `git fetch staging`
+following to your git config file
 
 .. code:: bash
 
@@ -50,9 +52,12 @@ following to your git config file and `git fetch staging`
 		fetch = +refs/heads/*:refs/remotes/staging/*
 		pushurl = no_push	
 
-Then checkout the `staging-next` branch
+Fetch and then checkout the `staging-next` branch
 
-	git checkout -b staging-next --track staging/staging-next
+.. code:: bash
+
+          git fetch staging
+	  git checkout -b staging-next --track staging/staging-next
 
 
 Building the staging drivers
