@@ -30,7 +30,7 @@ getting comfortable patching the kernel.  As such, I would expect most people to
 work on project one.  The others were really added just in case project one
 was too easy.
 
-1. checkpatch your way to glory: ``./checkpatch.rst``
+1. Checkpatch your way to glory: ``./checkpatch.rst``
 
 2. Probe and release: ``./probe-and-release.rst``
 
