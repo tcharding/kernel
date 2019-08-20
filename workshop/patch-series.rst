@@ -6,9 +6,9 @@ Once you have three (or more) commits on a branch (that was created off of
 Greg's staging-next branch) you are ready to create a patch set.
 
 When submitting patches to LKML it is expected that each patch in a series is
-complete.  What this means is that with each patch applied the kernel builds and
-any testing you did passes.  A maintainer may decide to take just the first
-[few] patches of your series.
+complete.  What this means is that with each patch applied (on top of the
+previous one) the kernel builds and any testing you did passes.  A maintainer
+may decide to take just the first [few] patches of your series.
 
 Create a patch set with
 
@@ -47,16 +47,19 @@ Optionally, at this stage, you can just set the To header to point to your own
 email address then send the series to yourself as a test run using the command
 below. If it all looks good you can then continue.
 
-In the cover letter set the To, and CC headers appropriately, since we patched
-drivers/staging/ the patches go to the driver development mailing list.  To find
-out who else to CC run `scripts/get_maintainer.pl` on either the file you
-patched or the patch itself.  You don't need to CC everyone returned by that
-command but you should at a minimum CC the maintainers (sometimes listed as
-'supporter').  It is nice to also CC a developer if they have a high percentage
-of commits signed.  The kernel policy is to err on the side of CC'ing too many
-people.  Be sure to also CC the driver dev mailing list and the LKML main
-mailing list.  All kernel patches **must** be sent to a mailing list, typically
-a subsystem mailing list.  CC'ing LKML main list is optional.
+In the cover letter set the To, and CC headers appropriately.  One way I like to
+address a patch is to send it to the maintainer[s] and CC everyone else
+including mailing lists.  Using this method, and since we patched
+drivers/staging/, the patches go 'To' Greg (and any other maintainer) and 'Cc'
+to the driver development mailing list.  To find out who else should be included
+run `scripts/get_maintainer.pl` on either the file you patched or the patch
+itself.  You don't need to include everyone returned by that command but you
+should at a minimum include the maintainers (sometimes listed as 'supporter')
+and one mailing list.  It is nice to also CC a developer if they have a high
+percentage of commits signed.  The kernel policy is to err on the side of CC'ing
+too many people.  All kernel patches **must** be sent to a mailing list,
+typically a subsystem mailing list.  CC'ing LKML main mailing list is common
+practice but optional.
 
 Feel free to CC me, Tobin C. Harding <me@tobin.cc> if you want.
 
