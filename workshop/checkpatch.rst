@@ -68,4 +68,6 @@ When committing each change please follow the guidelines in Section 2 'Describe
 your changes' of ``$KTREE/Documentation/process/submitting-patches.rst``.
 
 Once you have three commits on your branch you are ready to create and submit
-the series.  Please see ``./patch-series.rst``.
+the series.  Please see patch-series_.
+
+.. _patch-series: ./patch-series.rst
