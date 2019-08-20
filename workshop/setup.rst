@@ -76,7 +76,7 @@ building now so as to save time.  Create a config file by doing the following
         
 Then select *all* staging drivers under
 
-	Device Drivecs --> Staging
+Device Drivecs --> Staging
 
 (If you already know which driver you want to hack on just select it.)
 
@@ -90,4 +90,8 @@ completes you can verify that staging drivers were built by ``cd``ing into
 	318
 
         
-You have now completed the setup, well done - let's have some fun.
+You have now completed the setup, well done - let's have some fun.  Head back
+over to the readme_ to continue.
+
+.. _readme: ./README.rst
+
