@@ -78,7 +78,7 @@ another patch.
 You can now send you patch series using ``git send-email --to-cover --cc-cover /tmp/patches/*.patch``
 
 If you have not done so already then now is a good time to read the email from
-Dan Carpenter ``./email-from-dan``.  Along with Greg, Dan is a very active
+Dan Carpenter email-from-dan_.  Along with Greg, Dan is a very active
 reviewer of staging patches.  Both these reviewers are extremely welcoming to
 new comers and particularly patient.  They are happy to see you learn.  Please
 be respectful of their time by being diligent and heeding any advice they
@@ -91,3 +91,5 @@ yours here.
 
 
 Happy hacking!
+
+.. _email-from-dan: ./email-from-dan

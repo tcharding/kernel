@@ -53,7 +53,7 @@ We could look at all the lines indicated by CHECK:UNNECESSARY_PARENTHESES and
 check if the parentheses are really unnecessary.  By the way, this check
 requires some knowledge of kernel coding style, in this case the typical rule is
 to **not** make the code harder to understand.  As Dan Carpenter explains in
-``./email-from-dan`` doing code changes just to quieten a tool is not what you
+email-from-dan_ doing code changes just to quieten a tool is not what you
 want to do, we want to make sure we are improving the code as well as clearing
 the warning.
 
@@ -71,3 +71,4 @@ Once you have three commits on your branch you are ready to create and submit
 the series.  Please see patch-series_.
 
 .. _patch-series: ./patch-series.rst
+.. _email-from-dan: ./email-from-dan

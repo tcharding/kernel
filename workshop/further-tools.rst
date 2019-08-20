@@ -21,4 +21,6 @@ around with code they maintain.  ``drivers/staging`` is *the* place to learn the
 basics of kernel development, people will be very patient and welcoming of you
 there.
 
-Once you have a few patches queued up see ``./patch-series.rst`` if you need to.
+Once you have a few patches queued up see patch-series_ if you need to.
+
+.. _patch-series: ./patch-series.rst

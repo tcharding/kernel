@@ -3,7 +3,7 @@ Probe and Release
 =================
 
 This project is based on an email I received from Dan Carpenter on LKML.  You
-can read the full email in ``./email-from-dan`` and here is the paragraph that
+can read the full email in email-from-dan_ and here is the paragraph that
 inspired this project:
 
     Most of the time when you look at a new staging driver, then you do want
@@ -37,4 +37,7 @@ That's it.  Pretty simple to describe, harder to do.  See if you can put
 together a few patches that clearly improve the driver.  This is a good first
 step in understanding the driver and going on to working on it more extensively.
 
-Once you have a few patches queued up see ``./patch-series.rst`` if you need to.
+Once you have a few patches queued up see patch-series_ if you need to.
+
+.. _patch-series: ./patch-series.rst
+.. _email-from-dan: ./email-from-dan
