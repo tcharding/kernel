@@ -43,8 +43,8 @@ Other material
 This workshop is a re-write of the tutorial I gave in LA for OSS in 2017.  Some
 of the material from that may bu useful, specifically
 
-``../tutorial/cheat-sheet.rst``
-``../tutorial/trouble-shoot.rst``
+- ``../tutorial/cheat-sheet.rst``
+- ``../tutorial/trouble-shoot.rst``
 
 
 Thanks,
