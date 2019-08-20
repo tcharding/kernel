@@ -36,6 +36,8 @@ the whole tree is over 2 Gigabytes so please be patient.
 This will clone Greg's tree with `staging-next` branch already checked out.  If
 you cloned the tree some other way you can check out the branch with
 
+.. code:: bash
+                  
 	git checkout -b staging-next --track origin/staging-next
 
 Using a remote
