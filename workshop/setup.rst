@@ -26,8 +26,8 @@ does this then the NUC is going to choke so please consider just cloning with
 `--depth=1`.  Also when testing I was only getting 4.7 MiB/s during clone (and
 the whole tree is over 2 Gigabytes so please be patient.
 
-	SSID: oss-kdev
-	passphrase: oss-kdev-pass
+- SSID: oss-kdev
+- passphrase: oss-kdev-pass
 
 .. code:: bash
                   
