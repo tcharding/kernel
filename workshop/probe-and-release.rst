@@ -28,8 +28,8 @@ The steps involved, as suggested above are
   Fix stlye/whitespace issues first.
 - Have a look at the probe/release functions in more detail.
 
-  - You could checkpatch these functions fully
-  - Refactor
+  - You could checkpatch these functions fully.
+  - Refactor these functions.
   - Ensure they do everything that is expected of a probe/release function for this type of driver.
 
 
